@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblebounties",
+  "version": "1.0.0",
+  "name": "Cobblemon Bounties",
+  "description": "A simple bounty system for Cobblemon - hunt specific Pokemon for rewards!",
+  "authors": [
+    "Claude"
+  ],
+  "contact": {
+    "sources": "https://github.com/yourusername/cobblemon-bounties"
+  },
+  "license": "MIT",
+  "icon": "assets/cobblebounties/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.cobblebounties.CobbleBounties"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "cobblemon": ">=1.7.0"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
