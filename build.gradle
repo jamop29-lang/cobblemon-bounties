@@ -8,16 +8,7 @@ group = project.maven_group
 
 repositories {
     maven {
-        name = "CurseMaven"
-        url = "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-
-    maven {
-        name = "Cobblemon"
-        url = "https://maven.cobblemon.com/releases"
+        url = "https://api.modrinth.com/maven"
     }
 
     maven {
@@ -41,7 +32,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     
     // Cobblemon (from Maven)
-    modCompileOnly "com.cobblemon:fabric:1.7.1+1.21.1"
+    modCompileOnly "maven.modrinth:cobblemon:1.7.1+1.21.1-fabric"
 }
 
 processResources {
