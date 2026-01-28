@@ -4,14 +4,12 @@ import com.cobblebounties.CobbleBounties;
 import com.cobblemon.mod.common.api.events.CobblemonEvents;
 import com.cobblemon.mod.common.api.events.pokemon.PokemonCapturedEvent;
 import net.minecraft.server.level.ServerPlayer;
-import kotlin.Unit;
 
 public class PokemonCaptureHandler {
     
     public static void register() {
         CobblemonEvents.POKEMON_CAPTURED.subscribe(event -> {
             handlePokemonCapture(event);
-            return Unit.INSTANCE;
         });
         
         CobbleBounties.LOGGER.info("Registered Pokemon capture event handler");
