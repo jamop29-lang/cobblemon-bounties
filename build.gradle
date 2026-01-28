@@ -7,16 +7,23 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-    maven { 
+    maven {
         name = "CurseMaven"
         url = "https://cursemaven.com"
         content {
             includeGroup "curse.maven"
         }
     }
-    maven { 
-        url = "https://maven.fabricmc.net/" 
+
+    maven {
+        name = "Cobblemon"
+        url = "https://maven.cobblemon.com/releases"
     }
+
+    maven {
+        url = "https://maven.fabricmc.net/"
+    }
+
     mavenCentral()
 }
 
@@ -34,7 +41,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     
     // Cobblemon (from Maven)
-    modCompileOnly "curse.maven:cobblemon-687906:5738097"
+    modCompileOnly "com.cobblemon:fabric:1.7.1+1.21.1"
 }
 
 processResources {
